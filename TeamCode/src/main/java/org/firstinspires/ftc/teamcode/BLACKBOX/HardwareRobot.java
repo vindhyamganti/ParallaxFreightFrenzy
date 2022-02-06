@@ -54,6 +54,8 @@ public class HardwareRobot {
         // Save Reference to HardwareMap
         hwMap = ahwMap;
 
+
+
         // Define and Initialize Motors
         frontRight = hwMap.get(DcMotor.class, "frontRight");
         frontLeft = hwMap.get(DcMotor.class, "frontLeft");
@@ -61,22 +63,22 @@ public class HardwareRobot {
         backLeft = hwMap.get(DcMotor.class, "backLeft");
         surgicalTubing = hwMap.get(DcMotor.class, "surgicalTubing");
         turnCollector = hwMap.get(DcMotor.class, "turnCollector");
-        slide1 = hwMap.get(DcMotor.class, "slide1");
-        slide2 = hwMap.get(DcMotor.class, "slide2");
+        // slide1 = hwMap.get(DcMotor.class, "slide1");
+        // slide2 = hwMap.get(DcMotor.class, "slide2");
 
         // Reverse Directions
         frontRight.setDirection(DcMotorSimple.Direction.REVERSE);
         backRight.setDirection(DcMotorSimple.Direction.REVERSE);
 
+        // DriveTrain Motor Powers
+
+
         // Set All Motors To 0 Power
-        frontRight.setPower(0);
-        frontLeft.setPower(0);
-        backRight.setPower(0);
-        backLeft.setPower(0);
         surgicalTubing.setPower(0);
         turnCollector.setPower(0);
-        slide1.setPower(0);
-        slide2.setPower(0);
+
+        /* slide1.setPower(0);
+        slide2.setPower(0); */
 
         // Run Using Encoders
         frontRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -85,11 +87,12 @@ public class HardwareRobot {
         backLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         // Define and Initialize Servos
-        odo1 = hwMap.get(Servo.class, "odo1");
+
+        /* odo1 = hwMap.get(Servo.class, "odo1");
         odo2 = hwMap.get(Servo.class, "odo2");
         odo3 = hwMap.get(Servo.class, "odo3");
         depositor = hwMap.get(Servo.class, "depositor");
-        carousel = hwMap.get(Servo.class, "carousel");
+        carousel = hwMap.get(Servo.class, "carousel"); */
 
 
 
