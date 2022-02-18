@@ -72,19 +72,20 @@ public class Auto extends LinearOpMode {
 
 
         waitForStart();
-        strafeDrive(.6,-20,20,30);
-        sleep(500);
-        encoderDrive(.5,-32,-32,30);
-        sleep(2000);
-        encoderDrive(.3,25,25,30); //Moving backwards with it
-        // sleep(2000);
-        splineDrive(.1,.4,-20,50,20);//Splining into the build zone
-        sleep(500);
-        encoderDrive(.5,-20,-20,30); //aligning to wall
-        sleep(1000);
-        sleep(2500);
-        strafeDrive(.5,-10,10,30);//aligning to wall
-        encoderDrive(.6,40,40,30);//park
+        encoderDrive(.5,-8,28,30);
+//        strafeDrive(.6,-20,20,30);
+////        sleep(500);
+//        encoderDrive(.5,-32,-32,30);
+//        sleep(2000);
+//        encoderDrive(.3,25,25,30); //Moving backwards with it
+//        // sleep(2000);
+//        splineDrive(.1,.4,-20,50,20);//Splining into the build zone
+//        sleep(500);
+//        encoderDrive(.5,-20,-20,30); //aligning to wall
+//        sleep(1000);
+//        sleep(2500);
+//        strafeDrive(.5,-10,10,30);//aligning to wall
+//        encoderDrive(.6,40,40,30);//park
 
 
 
