@@ -100,24 +100,11 @@ public class HardwareRobot {
         retractSlide.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         // Define and Initialize Servos
-<<<<<<< Updated upstream:TeamCode/src/main/java/org/firstinspires/ftc/teamcode/BLACKBOX/TeleOp/HardwareRobot.java
-
-        odo1 = hwMap.get(Servo.class, "odo1");
-        odo2 = hwMap.get(Servo.class, "odo2");
-        odo3 = hwMap.get(Servo.class, "odo3");
-        depositor = hwMap.get(Servo.class, "depositor");
-        carousel = hwMap.get(Servo.class, "carousel");
-
-        odo1.setPosition(0.1);
-        odo2.setPosition(0.1);
-        odo3.setPosition(0.1);
-=======
         x1encoder = hwMap.get(Servo.class, "x1encoder");
         x2encoder = hwMap.get(Servo.class, "x2encoder");
         y1encoder = hwMap.get(Servo.class, "y1encoder");
         depositor = hwMap.get(Servo.class, "depositor");
         carousel = hwMap.get(CRServo.class, "carousel");
->>>>>>> Stashed changes:TeamCode/src/main/java/org/firstinspires/ftc/teamcode/BLACKBOX/HardwareRobot.java
 
 
 
