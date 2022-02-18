@@ -2,27 +2,25 @@ package org.firstinspires.ftc.teamcode.BLACKBOX.TeleOp;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.Gamepad;
+import com.qualcomm.robotcore.util.Hardware;
 
-@TeleOp
-public class DriveTrain extends LinearOpMode {
-    @Override
-    //Motor Configuration Names
-    public void runOpMode() throws InterruptedException {
-
-        HardwareRobot robot = new HardwareRobot();
-
-        robot.init(hardwareMap);
-
-        waitForStart();
-
-        if (isStopRequested()) return;
+import org.firstinspires.ftc.teamcode.BLACKBOX.HardwareRobot;
 
 
+public class DriveTrain {
 
-        while (opModeIsActive()) {
+    HardwareRobot robot;
 
-            double y = -gamepad1.left_stick_y;
-            double x = gamepad1.left_stick_x;
+    public DriveTrain(HardwareRobot r) {
+        robot = r;
+    }
+
+
+        public void Update(Gamepad gamepad1, Gamepad gamepad2) {
+
+            double y = gamepad1.left_stick_x;
+            double x = -gamepad1.left_stick_y;
             double rx = gamepad1.right_stick_x;
 
             double denominator = Math.max(Math.abs(y) + Math.abs(x) + Math.abs(rx), 1);
@@ -36,8 +34,8 @@ public class DriveTrain extends LinearOpMode {
 
             else {
                 double frontLeftPower = (y + x + rx) / denominator;
-                double backLeftPower = (y - x + rx) / denominator;
-                double frontRightPower = (y - x - rx) / denominator;
+                double backLeftPower = (y - x - rx) / denominator;
+                double frontRightPower = (y - x + rx) / denominator;
                 double backRightPower = (y + x - rx) / denominator;
 
                 robot.frontLeft.setPower(frontLeftPower);
@@ -46,12 +44,6 @@ public class DriveTrain extends LinearOpMode {
                 robot.backRight.setPower(backRightPower);
             }
 
-
-
-
-
-
         }
     }
-}
 
