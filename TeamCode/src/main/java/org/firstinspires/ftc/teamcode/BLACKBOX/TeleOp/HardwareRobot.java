@@ -5,6 +5,9 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.DcMotor;
 
 /**
  * This is NOT an opmode.
@@ -88,11 +91,15 @@ public class HardwareRobot {
 
         // Define and Initialize Servos
 
-        /* odo1 = hwMap.get(Servo.class, "odo1");
+        odo1 = hwMap.get(Servo.class, "odo1");
         odo2 = hwMap.get(Servo.class, "odo2");
         odo3 = hwMap.get(Servo.class, "odo3");
         depositor = hwMap.get(Servo.class, "depositor");
-        carousel = hwMap.get(Servo.class, "carousel"); */
+        carousel = hwMap.get(Servo.class, "carousel");
+
+        odo1.setPosition(0.1);
+        odo2.setPosition(0.1);
+        odo3.setPosition(0.1);
 
 
 
