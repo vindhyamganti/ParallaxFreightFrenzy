@@ -35,8 +35,8 @@ public class Auto extends LinearOpMode {
     public Servo carousel;
     //private Telemetry telemetry = null;
     static final double TICKS_PER_REV = 537.6;    // eg: TETRIX Motor Encoder
-    static final double DRIVE_GEAR_REDUCTION = 0.892;     // This is < 1.0 if geared UP
-    static final double WHEEL_DIAMETER_INCHES = 3.93701;     // For figuring circumference
+    static final double DRIVE_GEAR_REDUCTION = 1;     // This is < 1.0 if geared UP
+    static final double WHEEL_DIAMETER_INCHES = 3.796;     // For figuring circumference
     static final double COUNTS_PER_INCH = (TICKS_PER_REV * DRIVE_GEAR_REDUCTION) /
             (WHEEL_DIAMETER_INCHES * 3.1415);
 
