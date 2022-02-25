@@ -107,6 +107,8 @@ public class HardwareRobot {
         carousel = hwMap.get(CRServo.class, "carousel");
 
 
+        x1encoder.setPosition(0.1);
+
 
     }
 }
