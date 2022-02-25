@@ -106,7 +106,9 @@ public class HardwareRobot {
         depositor = hwMap.get(Servo.class, "depositor");
         carousel = hwMap.get(CRServo.class, "carousel");
 
-
+        x1encoder.setPosition(0.1);
+        // x2encoder.setPosition(0.1);
+        // y1encoder.setPosition(0.1);
 
     }
 }
